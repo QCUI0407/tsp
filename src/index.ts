@@ -14,12 +14,27 @@ class User{
 
 class UserOne{
 
+    private _courseCount = 1
+
     readonly code: string = "123456"
     constructor(
         public email: string,
         public name: string,
         private userId: string){
+    }
+    get getAppEmail():string{
+        return `app${this.email}`
+    }
 
+    get courseCount():number{
+        return this._courseCount
+    }
+
+    set courseCount(courseNum){
+        if(courseNum <= 1){
+            throw new Error("Course count should be more tham 1")
+        }
+        this._courseCount = courseNum
     }
 }
 
