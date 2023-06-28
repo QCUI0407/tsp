@@ -14,7 +14,9 @@ class User{
 
 class UserOne{
 
-    private _courseCount = 1
+    // private _courseCount = 1
+
+    protected _courseCount = 1
 
     readonly code: string = "123456"
     constructor(
@@ -38,9 +40,16 @@ class UserOne{
     }
 }
 
+class SubUser extends UserOne{
+    isFamily: boolean = true
+    changeCourseCount(){
+        this._courseCount = 4
+    }
+}
+
 const personA = new User("xxx@xx.com","xxx")
 
-const personb = new User("xxx@xx.com","xxx")
+const personB = new User("xxx@xx.com","xxx")
 
 
 personA.city = "shenyang"
