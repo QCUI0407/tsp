@@ -24,3 +24,19 @@ interface Botle{
 }
 
 identityFour<Botle>({})
+
+
+// ----------------------
+
+function searchProducts<T>(products: T[]):T{
+//    database
+    const myIndex = 3
+    return products[3]
+}
+
+// arrow fun
+
+const searchMore = <T>(products:T[]): T => {
+    const myIndex = 4
+    return products[myIndex]
+}
