@@ -55,3 +55,21 @@ function logValue(x: Date | string) {
         return "bird Food"
     }
   }
+
+
+  interface Circle{
+    kind: "circle",
+    radius:number
+  }
+
+  interface Square{
+    kind:"square",
+    side:number
+  }
+
+  interface Rectangle{
+    kind:"rectangle",
+    length:number,
+    width:number
+
+  }
